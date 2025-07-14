@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'Tanker-Regular';
+    src: url('fonts/Tanker-Regular.woff2') format('woff2'),
+    url('fonts/Tanker-Regular.woff') format('woff'),
+    url('fonts/Tanker-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+:root {
+    --pink: #F53676;
+    --orange: #FF783F;
+    --yellow: #FFA040;
+    --blue: #6D8FFF;
+    --green: #188091;
+    --black: #1B1B1B;
+    --white: #FFF0E8;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.title {
+    font-family: 'Tanker-Regular', serif;
+    font-weight: 400;
+    font-size: 24vh;
+    line-height: 100%;
+    letter-spacing: 0;
+    position: absolute;
+    bottom: 40px;
+    left: 30px;
+}
+
+.title__min{
+    font-size: 11vh;
+}
+
+.description {
+    max-width: 35vw;
+    font-family: Geologica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 100%;
+    position: absolute;
+    top: 40px;
+    left: 30px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    gap: 4vh;
+    position: fixed;
+    right: 30px;
+    top: 0;
+}
+
+.menu__block {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 24px;
+}
+
+.menu__item {
+    display: block;
+    width: 12vh;
+    height: 12vh;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.menu__text {
+    display: block;
+    opacity: 0;
+    font-weight: bold;
+    font-family: Geologica, sans-serif;
+}
+
+.menu__item:hover:not(.menu__item--active > .menu__item) {
+    border-radius: 12px;
+    transition: all 0.4s ease-in-out;
+}
+
+.menu__item--pink {
+    background-color: var(--pink);
+}
+
+.menu__item--orange {
+    background-color: var(--orange);
+}
+
+.menu__item--yellow {
+    background-color: var(--yellow);
+}
+
+.menu__item--blue {
+    background-color: var(--blue);
+}
+
+.menu__item--green {
+    background-color: var(--green);
+}
+
+.menu__item--black {
+    background-color: var(--black);
+}
+
+.menu__item--active > .menu__item {
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.menu__item--active > .menu__item--black {
+    background-color: var(--black);
+    border: 2px solid black;
+}
+
+.menu__item--active > .menu__text {
+    opacity: 1;
+}
