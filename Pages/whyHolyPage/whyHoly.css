@@ -1,0 +1,14 @@
+.main__container {
+    background-color: #FF783F;
+}
+
+.intro__title {
+    color: #FFF0E8;
+}
+
+.description {
+    max-width: 376px;
+    color: #FFF0E8;
+    font-size: 24px;
+    margin-bottom: 120px;
+}

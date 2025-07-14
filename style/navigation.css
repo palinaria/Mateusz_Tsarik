@@ -1,0 +1,76 @@
+:root {
+    --pink: #F53676;
+    --orange: #FF783F;
+    --yellow: #FFA040;
+    --blue: #6D8FFF;
+    --green: #188091;
+    --black: #1B1B1B;
+
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.menu__item {
+    display: block;
+    width: 100px;
+    height: 100px;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+}
+
+.menu__item:hover:not(.menu__item--active) {
+    border-radius: 12px;
+}
+
+.menu__item--pink {
+    background-color: var(--pink);
+}
+
+.menu__item--orange {
+    background-color: var(--orange);
+}
+
+.menu__item--yellow {
+    background-color: var(--yellow);
+}
+
+.menu__item--blue {
+    background-color: var(--blue);
+}
+
+.menu__item--green {
+    background-color: var(--green);
+}
+
+.menu__item--black {
+    background-color: var(--black);
+}
+
+.menu__item--active {
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.menu__item--black.menu__item--active {
+    background-color: var(--black);
+    border: 2px solid black;
+}
+
+.menu__item--active::before {
+    content: attr(data-label);
+    position: absolute;
+    left: -160px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: Geologica, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    white-space: nowrap;
+}
